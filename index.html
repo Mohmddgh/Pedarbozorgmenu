@@ -1,155 +1,139 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<!DOCTYPE html><html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <title>منوی رستوران پدربزرگ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    * { box-sizing: border-box; }
     body {
       font-family: sans-serif;
-      background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
       margin: 0;
-      padding: 0;
-      direction: rtl;
-      backdrop-filter: brightness(0.85);
+      background: #fefefe;
     }
     header {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: #e65100;
       color: white;
       padding: 1rem;
       text-align: center;
+      font-size: 1.2rem;
+    }
+    nav {
+      display: flex;
+      overflow-x: auto;
+      background: #fff3e0;
+      border-bottom: 1px solid #ddd;
+    }
+    nav button {
+      flex: 1;
+      padding: 1rem;
+      border: none;
+      background: transparent;
+      font-weight: bold;
+      color: #e65100;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    section {
+      padding: 1rem;
     }
     h2 {
-      color: white;
-      border-bottom: 2px solid #ffcc00;
-      margin-top: 2rem;
-      text-align: center;
+      color: #bf360c;
+      border-bottom: 2px solid #ff9800;
+      padding-bottom: 0.5rem;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 1rem;
-      padding: 1rem;
+      margin-top: 1rem;
     }
-    .item {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 15px;
+    .card {
+      background: white;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
     }
-    .item:hover {
-      transform: scale(1.02);
-    }
-    .item img {
+    .card img {
       width: 100%;
       height: 150px;
       object-fit: cover;
     }
-    .content {
-      padding: 1rem;
+    .card .info {
+      padding: 0.75rem;
     }
-    .content h3 {
+    .card .info h3 {
       margin: 0 0 0.5rem;
-      color: #8B0000;
+      color: #424242;
+      font-size: 1.1rem;
     }
-    .price {
+    .card .info .price {
+      color: #bf360c;
       font-weight: bold;
-      color: #333;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>رستوران پدربزرگ</h1>
-    <p>منوی آنلاین</p>
-  </header>
-
-  <section>
+  <header>منوی آنلاین رستوران پدربزرگ</header>
+  <nav>
+    <button onclick="scrollToSection('chelow')">چلویی‌ها</button>
+    <button onclick="scrollToSection('khoorak')">خوراک‌ها</button>
+    <button onclick="scrollToSection('pish')">پیش‌غذا</button>
+  </nav>  <section id="chelow">
     <h2>🍛 چلویی‌ها</h2>
     <div class="grid">
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1604908177093-b268d98f8437?auto=format&fit=crop&w=500&q=60" alt="چلو کوبیده">
-        <div class="content">
-          <h3>چلو کوبیده مخصوص (دوسیخ)</h3>
-          <div class="price">۲۱۰,۰۰۰</div>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=500&q=60" alt="چلو جوجه">
-        <div class="content">
-          <h3>چلو جوجه مخصوص (۲۲۰گرم)</h3>
-          <div class="price">۲۲۰,۰۰۰</div>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1631900807347-56d7471f0f0b?auto=format&fit=crop&w=500&q=60" alt="زرشک پلو">
-        <div class="content">
-          <h3>زرشک پلو با مرغ</h3>
-          <div class="price">۲۱۰,۰۰۰</div>
-        </div>
-      </div>
+      <div class="card"><img src="https://cdn.iranmenu.co/kabab1.jpg" alt="کوبیده"><div class="info"><h3>چلو کوبیده مخصوص (دوسیخ)</h3><div class="price">۲۱۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/joje1.jpg" alt="جوجه"><div class="info"><h3>چلو جوجه مخصوص (۲۲۰گرم)</h3><div class="price">۲۲۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/zereshk.jpg" alt="زرشک پلو"><div class="info"><h3>زرشک پلو با مرغ</h3><div class="price">۲۱۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/akbar.jpg" alt="اکبر جوجه"><div class="info"><h3>چلو اکبر جوجه</h3><div class="price">۲۶۵,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/mahic.jpg" alt="ماهیچه"><div class="info"><h3>چلو ماهیچه گوسفندی</h3><div class="price">۴۷۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/fish.jpg" alt="ماهی قزل آلا"><div class="info"><h3>چلو ماهی قزل آلا</h3><div class="price">۲۶۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/khoresht.jpg" alt="خورشت"><div class="info"><h3>چلو خورشت</h3><div class="price">۱۷۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/negini.jpg" alt="نگینی"><div class="info"><h3>چلو کباب نگینی مخصوص</h3><div class="price">۲۴۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/soltani.jpg" alt="سلطانی"><div class="info"><h3>چلو کباب سلطانی</h3><div class="price">۳۸۵,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/barg.jpg" alt="برگ"><div class="info"><h3>چلو کباب برگ</h3><div class="price">۳۴۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/tabrizi.jpg" alt="تبریزی"><div class="info"><h3>چلو کباب تبریزی</h3><div class="price">۲۴۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/bakhtiari.jpg" alt="بختیاری"><div class="info"><h3>چلو کباب بختیاری</h3><div class="price">۳۵۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/sarashefz.jpg" alt="سرآشپز"><div class="info"><h3>چلو جوجه سر آشپز</h3><div class="price">۲۷۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/loqmeh.jpg" alt="لقمه"><div class="info"><h3>چلو کباب لقمه مخصوص</h3><div class="price">۲۲۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/kobide1.jpg" alt="کوبیده معمولی"><div class="info"><h3>چلو کوبیده معمولی (تک سیخ)</h3><div class="price">۱۶۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/joje-normal.jpg" alt="جوجه معمولی"><div class="info"><h3>چلو جوجه معمولی (۱۳۰ گرم)</h3><div class="price">۱۶۵,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/vaziri.jpg" alt="میکس وزیری"><div class="info"><h3>چلو کباب میکس وزیری</h3><div class="price">۲۷۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/goosht.jpg" alt="چلو گوشت"><div class="info"><h3>چلو گوشت</h3><div class="price">۳۳۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/barg-file.jpg" alt="برگ فیله"><div class="info"><h3>چلو کباب برگ با فیله</h3><div class="price">۵۳۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/kareh.jpg" alt="کره"><div class="info"><h3>چلو کره</h3><div class="price">۸۰,۰۰۰</div></div></div>
     </div>
-  </section>
-
-  <section>
+  </section>  <section id="khoorak">
     <h2>🍲 خوراک‌ها</h2>
     <div class="grid">
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1613145991031-e2a0ebd80b3f?auto=format&fit=crop&w=500&q=60" alt="خوراک کوبیده">
-        <div class="content">
-          <h3>خوراک کوبیده تک سیخ</h3>
-          <div class="price">۶۵,۰۰۰</div>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1632258514173-3a247e80c1b7?auto=format&fit=crop&w=500&q=60" alt="خوراک جوجه">
-        <div class="content">
-          <h3>خوراک جوجه مخصوص</h3>
-          <div class="price">۱۴۰,۰۰۰</div>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1613145991121-e3cb62b3be6f?auto=format&fit=crop&w=500&q=60" alt="اکبر جوجه">
-        <div class="content">
-          <h3>خوراک اکبر جوجه</h3>
-          <div class="price">۲۰۰,۰۰۰</div>
-        </div>
-      </div>
+      <div class="card"><img src="https://cdn.iranmenu.co/kobide1.jpg" alt="خوراک کوبیده"><div class="info"><h3>خوراک کوبیده تک سیخ</h3><div class="price">۶۵,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/joje1.jpg" alt="خوراک جوجه"><div class="info"><h3>خوراک جوجه مخصوص</h3><div class="price">۱۴۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/akbar.jpg" alt="اکبر جوجه"><div class="info"><h3>خوراک اکبر جوجه</h3><div class="price">۲۰۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/bakhtiari.jpg" alt="بختیاری"><div class="info"><h3>خوراک کباب بختیاری</h3><div class="price">۲۸۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/barg-file.jpg" alt="فیله گوساله"><div class="info"><h3>خوراک برگ با فیله گوساله</h3><div class="price">۳۲۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/negini.jpg" alt="نگینی"><div class="info"><h3>خوراک کوبیده نگینی</h3><div class="price">۱۴۵,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/wings.jpg" alt="بال کبابی"><div class="info"><h3>بال کبابی</h3><div class="price">۷۵,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/vaziri.jpg" alt="میکس وزیری"><div class="info"><h3>خوراک میکس وزیری</h3><div class="price">۱۹۵,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/morgh.jpg" alt="خوراک مرغ"><div class="info"><h3>خوراک مرغ</h3><div class="price">۱۳۵,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/khoresht.jpg" alt="خورشت"><div class="info"><h3>خورشت خالی</h3><div class="price">۹۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/fish.jpg" alt="ماهی قزل آلا"><div class="info"><h3>خوراک ماهی قزل آلا</h3><div class="price">۲۱۵,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/loqmeh.jpg" alt="لقمه"><div class="info"><h3>خوراک کباب لقمه مخصوص</h3><div class="price">۱۳۵,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/sarashefz.jpg" alt="سرآشپز"><div class="info"><h3>خوراک جوجه سر آشپز</h3><div class="price">۲۵۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/joje-bone.jpg" alt="با استخوان"><div class="info"><h3>جوجه با استخوان</h3><div class="price">۲۶۰,۰۰۰</div></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/tomato.jpg" alt="گوجه"><div class="info"><h3>گوجه خالی</h3><div class="price">۱۵,۰۰۰</div></div></div>
     </div>
-  </section>
-
-  <section>
+  </section>  <section id="pish">
     <h2>🥗 پیش‌غذا</h2>
     <div class="grid">
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1625220198000-17ed2c8a4a9e?auto=format&fit=crop&w=500&q=60" alt="زیتون پرورده">
-        <div class="content">
-          <h3>زیتون پرورده</h3>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=500&q=60" alt="سالاد فصل">
-        <div class="content">
-          <h3>سالاد فصل</h3>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1606788075764-50c9ac109f4d?auto=format&fit=crop&w=500&q=60" alt="ماست موسیر">
-        <div class="content">
-          <h3>ماست موسیر</h3>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1626073823478-83e3910cb38b?auto=format&fit=crop&w=500&q=60" alt="ترشی">
-        <div class="content">
-          <h3>ترشی</h3>
-        </div>
-      </div>
+      <div class="card"><img src="https://cdn.iranmenu.co/zeiton.jpg" alt="زیتون"><div class="info"><h3>زیتون پرورده</h3></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/salad.jpg" alt="سالاد"><div class="info"><h3>سالاد فصل</h3></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/mast.jpg" alt="ماست"><div class="info"><h3>ماست موسیر</h3></div></div>
+      <div class="card"><img src="https://cdn.iranmenu.co/torshi.jpg" alt="ترشی"><div class="info"><h3>ترشی</h3></div></div>
     </div>
-  </section>
-</body>
+  </section>  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script></body>
 </html>
