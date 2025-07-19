@@ -1,108 +1,122 @@
-<!DOCTYPE html><html lang="fa">
-<head>
+<!DOCTYPE html><html lang="fa"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منوی پدربزرگ</title>
+  <title>منوی رستوران پدربزرگ</title>
   <style>
     body {
-      font-family: Vazirmatn, sans-serif;
-      direction: rtl;
-      background-color: #fff3f0;
-      color: #333;
+      font-family: Tahoma, sans-serif;
+      background-color: #fff4f4;
       margin: 0;
       padding: 0;
-    }
-    header {
-      background-image: url("434053629_735463292028879_1389937474070798736_n.jpg");
-      background-size: cover;
-      background-position: center;
-      height: 140px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .restaurant-name {
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-      margin-top: 10px;
-      color: #b30000;
-    }
-    .menu-section {
-      padding: 20px;
-    }
-    h2 {
-      border-bottom: 2px solid #b30000;
-      padding-bottom: 5px;
-      margin-top: 30px;
-      color: #b30000;
-    }
-    .item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 48%;
-      margin: 10px 1%;
-      background: #fff;
-      border-radius: 10px;
-      padding: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    .price {
-      font-weight: bold;
-      white-space: nowrap;
-    }
+      direction: rtl;
+    }header {
+  background-color: #b30000;
+  padding: 10px;
+  text-align: center;
+}
+
+header img {
+  max-width: 66%;
+  height: auto;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #800000;
+  margin-top: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #cc0000;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+section {
+  padding: 20px;
+}
+
+.menu-category {
+  margin-bottom: 40px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.menu-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h3 {
+  margin: 0 0 10px;
+  color: #b30000;
+}
+
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header></header>
-  <div class="restaurant-name">پدربزرگ</div>
-  <div class="menu-section">
-    <h2>چلویی ها</h2>
-    <div class="row">
-      <div class="item"><div>چلو جوجه مخصوص</div><div class="price">۲۳۰,۰۰۰</div></div>
-      <div class="item"><div>چلو کباب کوبیده مخصوص</div><div class="price">۲۲۰,۰۰۰</div></div>
-      <div class="item"><div>زرشک پلو با مرغ</div><div class="price">۲۱۵,۰۰۰</div></div>
-      <div class="item"><div>چلو کباب نگینی</div><div class="price">۲۴۵,۰۰۰</div></div>
-      <div class="item"><div>چلو اکبر جوجه</div><div class="price">۲۷۵,۰۰۰</div></div>
-      <div class="item"><div>چلو ماهی غزل آلا</div><div class="price">۳۱۰,۰۰۰</div></div>
-      <div class="item"><div>چلو کباب برگ با فیله گوساله</div><div class="price">۳۹۰,۰۰۰</div></div>
-      <div class="item"><div>چلو خورشت</div><div class="price">۱۷۵,۰۰۰</div></div>
-      <div class="item"><div>چلو کباب میکس وزیری</div><div class="price">۲۸۵,۰۰۰</div></div>
-      <div class="item"><div>چلو کباب سلطانی</div><div class="price">۴۴۵,۰۰۰</div></div>
-      <div class="item"><div>چلو کباب بختیاری</div><div class="price">۳۲۰,۰۰۰</div></div>
-      <div class="item"><div>چلو ماهیچه گوسفندی</div><div class="price">۴۸۰,۰۰۰</div></div>
-      <div class="item"><div>چلو کباب کوبیده معمولی (تک سیخ)</div><div class="price">۱۷۰,۰۰۰</div></div>
-      <div class="item"><div>چلو جوجه معمولی (۱۳۰گرم)</div><div class="price">۱۷۵,۰۰۰</div></div>
-      <div class="item"><div>چلو کباب لقمه مخصوص</div><div class="price">۲۳۰,۰۰۰</div></div>
-      <div class="item"><div>چلو کره</div><div class="price">۸۵,۰۰۰</div></div>
-    </div><h2>خوراک ها</h2>
-<div class="row">
-  <div class="item"><div>کوبیده تک سیخ</div><div class="price">۷۰,۰۰۰</div></div>
-  <div class="item"><div>خوراک جوجه مخصوص</div><div class="price">۱۵۰,۰۰۰</div></div>
-  <div class="item"><div>بال کبابی</div><div class="price">۷۵,۰۰۰</div></div>
-  <div class="item"><div>خوراک مرغ</div><div class="price">۱۳۰,۰۰۰</div></div>
-  <div class="item"><div>خوراک نگینی</div><div class="price">۱۴۵,۰۰۰</div></div>
-  <div class="item"><div>خوراک اکبر جوجه</div><div class="price">۱۹۰,۰۰۰</div></div>
-  <div class="item"><div>خوراک ماهی غزل آلا</div><div class="price">۱۸۰,۰۰۰</div></div>
-  <div class="item"><div>خوراک کباب لقمه مخصوص</div><div class="price">۱۴۰,۰۰۰</div></div>
-  <div class="item"><div>خورشت خالی</div><div class="price">۹۵,۰۰۰</div></div>
-</div>
-
-<h2>پیش غذا</h2>
-<div class="row">
-  <div class="item"><div>سالاد فصل</div></div>
-  <div class="item"><div>زیتون پرورده</div></div>
-  <div class="item"><div>ماست موسیر</div></div>
-  <div class="item"><div>ترشی</div></div>
-</div>
-
-  </div>
-</body>
-                                                        </html>
+</head><body>
+  <header>
+    <img src="https://mohmddgh.github.io/Pedarbozorgmenu/assets/434053629_735463292028879_1389937474070798736_n.jpg" alt="هدر رستوران">
+  </header>  <h1>رستوران پدربزرگ</h1>  <nav>
+    <a href="#chelo">چلویی</a>
+    <a href="#khoorak">خوراک</a>
+    <a href="#pish">پیش‌غذا</a>
+  </nav>  <section id="chelo" class="menu-category">
+    <h2>چلویی‌ها</h2>
+    <div class="menu-grid">
+      <div class="menu-item"><h3>چلو جوجه مخصوص</h3><p>۲۳۰,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>چلو کباب کوبیده مخصوص</h3><p>۲۲۰,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>زرشک پلو با مرغ</h3><p>۲۱۵,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>چلو کباب نگینی</h3><p>۲۴۵,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>چلو اکبر جوجه</h3><p>۲۷۵,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>چلو ماهی غزل آلا</h3><p>۳۱۰,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>چلو کباب برگ با فیله گوساله</h3><p>۳۹۰,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>چلو خورشت</h3><p>۱۷۵,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>چلو کباب میکس وزیری</h3><p>۲۸۵,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>چلو کباب سلطانی</h3><p>۴۴۵,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>چلو کباب بختیاری</h3><p>۳۲۰,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>چلو ماهیچه گوسفندی</h3><p>۴۸۰,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>چلو کباب کوبیده معمولی (تک سیخ)</h3><p>۱۷۰,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>چلو جوجه معمولی (۱۳۰گرم)</h3><p>۱۷۵,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>چلو کباب لقمه مخصوص</h3><p>۲۳۰,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>چلو کره</h3><p>۸۵,۰۰۰ تومان</p></div>
+    </div>
+  </section>  <section id="khoorak" class="menu-category">
+    <h2>خوراک‌ها</h2>
+    <div class="menu-grid">
+      <div class="menu-item"><h3>کوبیده تک سیخ</h3><p>۷۰,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>خوراک جوجه مخصوص</h3><p>۱۵۰,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>بال کبابی</h3><p>۷۵,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>خوراک مرغ</h3><p>۱۳۰,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>خوراک نگینی</h3><p>۱۴۵,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>خوراک اکبر جوجه</h3><p>۱۹۰,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>خوراک ماهی غزل آلا</h3><p>۱۸۰,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>خوراک کباب لقمه مخصوص</h3><p>۱۴۰,۰۰۰ تومان</p></div>
+      <div class="menu-item"><h3>خورشت خالی</h3><p>۹۵,۰۰۰ تومان</p></div>
+    </div>
+  </section>  <section id="pish" class="menu-category">
+    <h2>پیش‌غذا</h2>
+    <div class="menu-grid">
+      <div class="menu-item"><h3>سالاد فصل</h3></div>
+      <div class="menu-item"><h3>زیتون پرورده</h3></div>
+      <div class="menu-item"><h3>ماست موسیر</h3></div>
+      <div class="menu-item"><h3>ترشی</h3></div>
+    </div>
+  </section>
+</body></html>
