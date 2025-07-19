@@ -1,39 +1,157 @@
-import React from "react"; import { Card, CardContent } from "@/components/ui/card"; import { Badge } from "@/components/ui/badge";
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>رستوران پدربزرگ</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+    .title {
+      text-align: center;
+      font-size: 32px;
+      color: #c0392b;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    header img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-bottom: 4px solid #c0392b;
+    }
+    nav {
+      background-color: #c0392b;
+      padding: 15px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 30px 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #c0392b;
+      margin-bottom: 20px;
+      font-size: 24px;
+      border-bottom: 2px solid #c0392b;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .item {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .item img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .item h4 {
+      margin: 8px 0 4px;
+      font-size: 16px;
+      color: #2c3e50;
+    }
+    .item p {
+      margin: 0;
+      color: #555;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
 
-const foods = [ { name: "چلو کباب کوبیده", image: "/images/IMG_۲۰۲۵۰۷۰۸_۱۶۳۷۴۱.jpg", }, { name: "خوراک جوجه مخصوص", image: "/images/IMG_۲۰۲۵۰۷۰۸_۱۶۲۵۵۰.jpg", }, { name: "زرشک پلو با مرغ", image: "/images/IMG_۲۰۲۵۰۷۰۸_۱۶۱۹۱۲.jpg", }, { name: "چلو کباب لقمه مخصوص", image: "/images/IMG_۲۰۲۵۰۷۰۸_۱۶۱۹۵۲.jpg", }, { name: "چلو برگ با فیله گوساله", image: "/images/IMG_۲۰۲۵۰۷۰۸_۱۶۲۲۳۳.jpg", }, { name: "چلو چنجه", image: "/images/IMG_۲۰۲۵۰۷۰۸_۱۶۲۳۰۵.jpg", }, { name: "چلو کباب سلطانی", image: "/images/IMG_۲۰۲۵۰۷۰۸_۱۶۲۳۴۷.jpg", }, { name: "چلو کباب میکس وزیری", image: "/images/IMG_۲۰۲۵۰۷۰۸_۱۶۲۴۲۴.jpg", }, { name: "خوراک بختیاری", image: "/images/IMG_۲۰۲۵۰۷۰۸_۱۶۲۶۱۶.jpg", }, { name: "خوراک نگینی", image: "/images/IMG_۲۰۲۵۰۷۰۸_۱۶۲۶۴۰.jpg", } ];
+  <div class="title">رستوران پدربزرگ</div>
 
-const categories = [ { title: "چلویی‌ها", items: foods.slice(0, 6), }, { title: "خوراک‌ها", items: foods.slice(6, 10), } ];
+  <header>
+    <img src="https://media.imna.ir/d/2025/03/15/4/2172576.jpg?ts=1742023006000" alt="رستوران پدربزرگ">
+  </header>
 
-export default function MenuPage() { return ( <div className="min-h-screen bg-red-100 p-4"> <div className="text-center text-4xl font-bold text-gray-800 mb-6"> <img
-src="/images/434053629_735463292028879_1389937474070798736_n.jpg"
-alt="هدر رستوران"
-className="w-full max-h-[200px] object-cover rounded-xl mb-2"
-/> رستوران پدربزرگ </div>
+  <nav>
+    <a href="#chelovi">چلویی‌ها</a>
+    <a href="#khorak">خوراک‌ها</a>
+    <a href="#pishghaza">پیش‌غذا</a>
+  </nav>
 
-{categories.map((category, index) => (
-    <div key={index} className="mb-10">
-      <h2 className="text-3xl font-extrabold text-gray-900 mb-2 border-b border-gray-400 pb-1">
-        {category.title}
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {category.items.map((item, idx) => (
-          <Card key={idx} className="bg-white rounded-2xl shadow-md overflow-hidden">
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-full h-40 object-cover"
-            />
-            <CardContent className="p-3">
-              <h3 className="text-lg font-semibold text-gray-800">
-                {item.name}
-              </h3>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+  <section id="chelovi">
+    <h2>چلویی‌ها</h2>
+    <div class="grid">
+      <div class="item"><img src="https://raw.githubusercontent.com/mohmddgh/Pedarbozorgmenu/main/IMG_۲۰۲۵۰۷۰۸_۱۶۱۹۱۲.jpg" alt=""><h4>زرشک پلو با مرغ</h4><p>۲۱۰,۰۰۰</p></div>
+      <div class="item"><img src="https://raw.githubusercontent.com/mohmddgh/Pedarbozorgmenu/main/IMG_۲۰۲۵۰۷۰۸_۱۶۱۹۵۲.jpg" alt=""><h4>چلو کباب لقمه مخصوص</h4><p>۲۲۰,۰۰۰</p></div>
+      <div class="item"><img src="https://raw.githubusercontent.com/mohmddgh/Pedarbozorgmenu/main/IMG_۲۰۲۵۰۷۰۸_۱۶۲۲۳۳.jpg" alt=""><h4>چلو برگ با فیله گوساله</h4><p>۳۶۰,۰۰۰</p></div>
+      <div class="item"><img src="https://raw.githubusercontent.com/mohmddgh/Pedarbozorgmenu/main/IMG_۲۰۲۵۰۷۰۸_۱۶۲۳۰۵.jpg" alt=""><h4>چلو چنجه</h4><p>۳۶۰,۰۰۰</p></div>
+      <div class="item"><img src="https://raw.githubusercontent.com/mohmddgh/Pedarbozorgmenu/main/IMG_۲۰۲۵۰۷۰۸_۱۶۲۳۴۷.jpg" alt=""><h4>چلو کباب سلطانی</h4><p>۳۸۵,۰۰۰</p></div>
+      <div class="item"><img src="https://raw.githubusercontent.com/mohmddgh/Pedarbozorgmenu/main/IMG_۲۰۲۵۰۷۰۸_۱۶۲۴۲۴.jpg" alt=""><h4>چلو کباب میکس وزیری</h4><p>۲۷۰,۰۰۰</p></div>
+      <div class="item"><h4>چلو جوجه مخصوص (۲۲۰گرم)</h4><p>۲۲۰,۰۰۰</p></div>
+      <div class="item"><h4>چلو اکبر جوجه</h4><p>۲۶۵,۰۰۰</p></div>
+      <div class="item"><h4>چلو ماهیچه گوسفندی</h4><p>۴۷۰,۰۰۰</p></div>
+      <div class="item"><h4>چلو ماهی قزل آلا</h4><p>۲۶۰,۰۰۰</p></div>
+      <div class="item"><h4>چلو خورشت</h4><p>۱۷۰,۰۰۰</p></div>
+      <div class="item"><h4>چلو کباب نگینی مخصوص</h4><p>۲۴۰,۰۰۰</p></div>
+      <div class="item"><h4>چلو کباب برگ</h4><p>۳۴۰,۰۰۰</p></div>
+      <div class="item"><h4>چلو کباب تبریزی</h4><p>۲۴۰,۰۰۰</p></div>
+      <div class="item"><h4>چلو جوجه سرآشپز</h4><p>۲۷۰,۰۰۰</p></div>
+      <div class="item"><h4>چلو کباب کوبیده معمولی (تک سیخ)</h4><p>۱۶۰,۰۰۰</p></div>
+      <div class="item"><h4>چلو جوجه معمولی (۱۳۰ گرم)</h4><p>۱۶۵,۰۰۰</p></div>
+      <div class="item"><h4>چلو گوشت</h4><p>۳۳۰,۰۰۰</p></div>
+      <div class="item"><h4>چلو کره</h4><p>۸۰,۰۰۰</p></div>
     </div>
-  ))}
-</div>
+  </section>
 
-); }
+  <section id="khorak">
+    <h2>خوراک‌ها</h2>
+    <div class="grid">
+      <div class="item"><img src="https://raw.githubusercontent.com/mohmddgh/Pedarbozorgmenu/main/IMG_۲۰۲۵۰۷۰۸_۱۶۲۵۵۰.jpg" alt=""><h4>خوراک جوجه مخصوص</h4><p>۱۴۰,۰۰۰</p></div>
+      <div class="item"><img src="https://raw.githubusercontent.com/mohmddgh/Pedarbozorgmenu/main/IMG_۲۰۲۵۰۷۰۸_۱۶۲۶۱۶.jpg" alt=""><h4>خوراک بختیاری</h4><p>۲۸۰,۰۰۰</p></div>
+      <div class="item"><img src="https://raw.githubusercontent.com/mohmddgh/Pedarbozorgmenu/main/IMG_۲۰۲۵۰۷۰۸_۱۶۲۶۴۰.jpg" alt=""><h4>خوراک نگینی</h4><p>۱۴۵,۰۰۰</p></div>
+      <div class="item"><img src="https://raw.githubusercontent.com/mohmddgh/Pedarbozorgmenu/main/IMG_۲۰۲۵۰۷۰۸_۱۶۳۷۴۱.jpg" alt=""><h4>خوراک کوبیده (تک سیخ)</h4><p>۶۵,۰۰۰</p></div>
+      <div class="item"><h4>خوراک اکبر جوجه</h4><p>۲۰۰,۰۰۰</p></div>
+      <div class="item"><h4>خوراک برگ با فیله گوساله</h4><p>۳۲۰,۰۰۰</p></div>
+      <div class="item"><h4>بال کبابی</h4><p>۷۵,۰۰۰</p></div>
+      <div class="item"><h4>خوراک میکس وزیری</h4><p>۱۹۵,۰۰۰</p></div>
+      <div class="item"><h4>خوراک مرغ</h4><p>۱۳۵,۰۰۰</p></div>
+      <div class="item"><h4>خورشت خالی</h4><p>۹۰,۰۰۰</p></div>
+      <div class="item"><h4>خوراک ماهی قزل آلا</h4><p>۲۱۵,۰۰۰</p></div>
+      <div class="item"><h4>خوراک کباب لقمه مخصوص</h4><p>۱۳۵,۰۰۰</p></div>
+      <div class="item"><h4>خوراک جوجه سرآشپز</h4><p>۲۵۰,۰۰۰</p></div>
+      <div class="item"><h4>جوجه با استخوان</h4><p>۲۶۰,۰۰۰</p></div>
+      <div class="item"><h4>گوجه خالی</h4><p>۱۵,۰۰۰</p></div>
+    </div>
+  </section>
 
+  <section id="pishghaza">
+    <h2>پیش‌غذا</h2>
+    <div class="grid">
+      <div class="item"><h4>زیتون پرورده</h4></div>
+      <div class="item"><h4>سالاد فصل</h4></div>
+      <div class="item"><h4>ماست موسیر</h4></div>
+      <div class="item"><h4>ترشی</h4></div>
+    </div>
+  </section>
+
+</body>
+    </html>
