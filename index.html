@@ -1,6 +1,8 @@
-<!DOCTYPE html><html lang="fa"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>منوی رستوران پدربزرگ</title>
   <style>
     body {
@@ -9,75 +11,76 @@
       margin: 0;
       padding: 0;
       direction: rtl;
-    }header {
-  background-color: #b30000;
-  padding: 10px;
-  text-align: center;
-}
-
-header img {
-  max-width: 66%;
-  height: auto;
-  border-radius: 10px;
-}
-
-h1 {
-  text-align: center;
-  color: #800000;
-  margin-top: 10px;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  background-color: #cc0000;
-  padding: 10px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 5px 10px;
-}
-
-section {
-  padding: 20px;
-}
-
-.menu-category {
-  margin-bottom: 40px;
-}
-
-.menu-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.menu-item {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.menu-item h3 {
-  margin: 0 0 10px;
-  color: #b30000;
-}
-
+    }
+    header {
+      background-color: #b30000;
+      padding: 10px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 10px 0;
+      font-size: 24px;
+      color: white;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #cc0000;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+    }
+    section {
+      padding: 20px;
+    }
+    h2 {
+      border-bottom: 2px solid #b30000;
+      padding-bottom: 5px;
+      font-size: 22px;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .menu-item {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+    .menu-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .menu-item h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+      color: #b30000;
+    }
+    .menu-item p {
+      color: #555;
+      margin: 0;
+    }
   </style>
-</head><body>
-  <header>
-    <img src="https://mohmddgh.github.io/Pedarbozorgmenu/assets/434053629_735463292028879_1389937474070798736_n.jpg" alt="هدر رستوران">
-  </header>  <h1>رستوران پدربزرگ</h1>  <nav>
-    <a href="#chelo">چلویی</a>
-    <a href="#khoorak">خوراک</a>
+</head>
+<body>
+  <header><h1>رستوران پدربزرگ</h1></header>
+  <nav>
+    <a href="#chelo">چلویی‌ها</a>
+    <a href="#khorak">خوراک‌ها</a>
     <a href="#pish">پیش‌غذا</a>
-  </nav>  <section id="chelo" class="menu-category">
+  </nav>
+
+  <section id="chelo">
     <h2>چلویی‌ها</h2>
     <div class="menu-grid">
       <div class="menu-item"><h3>چلو جوجه مخصوص</h3><p>۲۳۰,۰۰۰ تومان</p></div>
@@ -97,7 +100,9 @@ section {
       <div class="menu-item"><h3>چلو کباب لقمه مخصوص</h3><p>۲۳۰,۰۰۰ تومان</p></div>
       <div class="menu-item"><h3>چلو کره</h3><p>۸۵,۰۰۰ تومان</p></div>
     </div>
-  </section>  <section id="khoorak" class="menu-category">
+  </section>
+
+  <section id="khorak">
     <h2>خوراک‌ها</h2>
     <div class="menu-grid">
       <div class="menu-item"><h3>کوبیده تک سیخ</h3><p>۷۰,۰۰۰ تومان</p></div>
@@ -110,7 +115,9 @@ section {
       <div class="menu-item"><h3>خوراک کباب لقمه مخصوص</h3><p>۱۴۰,۰۰۰ تومان</p></div>
       <div class="menu-item"><h3>خورشت خالی</h3><p>۹۵,۰۰۰ تومان</p></div>
     </div>
-  </section>  <section id="pish" class="menu-category">
+  </section>
+
+  <section id="pish">
     <h2>پیش‌غذا</h2>
     <div class="menu-grid">
       <div class="menu-item"><h3>سالاد فصل</h3></div>
@@ -119,4 +126,5 @@ section {
       <div class="menu-item"><h3>ترشی</h3></div>
     </div>
   </section>
-</body></html>
+</body>
+  </html>
