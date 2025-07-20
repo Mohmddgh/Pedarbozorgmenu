@@ -7,18 +7,24 @@
   <style>
     body {
       font-family: Tahoma, sans-serif;
-      background-color: #fff4f4;
+      background-color: #fff0f0;
       margin: 0;
       padding: 0;
       direction: rtl;
     }
     header {
       background-color: #b30000;
-      padding: 10px;
+      padding: 0;
       text-align: center;
     }
+    header img {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: cover;
+    }
     header h1 {
-      margin: 10px 0;
+      margin: 5px 0;
       font-size: 24px;
       color: white;
     }
@@ -45,7 +51,7 @@
     }
     .menu-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
     .menu-item {
@@ -73,7 +79,12 @@
   </style>
 </head>
 <body>
-  <header><h1>رستوران پدربزرگ</h1></header>
+
+  <header>
+    <img src="https://i.postimg.cc/nrPY594Q/images.jpg" alt="هدر رستوران" />
+    <h1>رستوران پدربزرگ</h1>
+  </header>
+
   <nav>
     <a href="#chelo">چلویی‌ها</a>
     <a href="#khorak">خوراک‌ها</a>
@@ -83,8 +94,14 @@
   <section id="chelo">
     <h2>چلویی‌ها</h2>
     <div class="menu-grid">
-      <div class="menu-item"><h3>چلو جوجه مخصوص</h3><p>۲۳۰,۰۰۰ تومان</p></div>
-      <div class="menu-item"><h3>چلو کباب کوبیده مخصوص</h3><p>۲۲۰,۰۰۰ تومان</p></div>
+      <div class="menu-item">
+        <img src="https://i.postimg.cc/9QXc9s08/juje.jpg" alt="چلو جوجه مخصوص" />
+        <h3>چلو جوجه مخصوص</h3><p>۲۳۰,۰۰۰ تومان</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://i.postimg.cc/jdrcgMzB/kubide.jpg" alt="چلو کباب کوبیده مخصوص" />
+        <h3>چلو کباب کوبیده مخصوص</h3><p>۲۲۰,۰۰۰ تومان</p>
+      </div>
       <div class="menu-item"><h3>زرشک پلو با مرغ</h3><p>۲۱۵,۰۰۰ تومان</p></div>
       <div class="menu-item"><h3>چلو کباب نگینی</h3><p>۲۴۵,۰۰۰ تومان</p></div>
       <div class="menu-item"><h3>چلو اکبر جوجه</h3><p>۲۷۵,۰۰۰ تومان</p></div>
@@ -126,5 +143,6 @@
       <div class="menu-item"><h3>ترشی</h3></div>
     </div>
   </section>
+
 </body>
-  </html>
+                                                     </html>
